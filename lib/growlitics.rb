@@ -23,12 +23,14 @@ p.each do |profile|
   report.dimensions :date
   report.results.each do |day|
     # only creates a message if there are pageviews
-    message = "#{day.pageviews} pageviews, #{day.visitors} visitors" if day.pageviews.to_i > 0
-    if growl && !message.blank?
+if day.pageviews.to_i > 0
+    message = "#{day.pageviews} pageviews, #{day.visitors} visitors" 
+    if growl 
       g = Growl.new "localhost", "ruby-growl", ["ruby-growl Notification"] #, ["ruby-growl Notification"]
       g.notify "ruby-growl Notification", message, "#{profile.title}"
     else
       puts "#{day.pageviews} from #{day.visitors} visitors on #{profile.title}" if day.pageviews.to_i > 0
     end
+end
   end
 end
