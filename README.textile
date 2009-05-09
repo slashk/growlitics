@@ -2,6 +2,17 @@ h2. Growlitics
 
 A simple ruby script that queries Google Analytics for your performance statistics and then displays them on your screen using Growl or simply to the command line.
 
+h3. Usage
+
+Before you can use the script, you need to set two environmental variables:
+bq. @ # export GOOGLE_USERNAME="jimmy@gmail.com" @
+bq. @ # export GOOGLE_PASSWORD="h0td0g!" @
+
+Once these have been set, simply execute the script at the command line:
+bq. @ # ./growlitics.rb @
+
+The script is located in the @lib@ folder.
+
 h3. Dependencies
 
 This script requires the 'Garb' (for Google Analytics support) and 'ruby-growl' for Growl support.
