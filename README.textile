@@ -1,0 +1,14 @@
+h2. Growlitics
+
+A simple ruby script that queries Google Analytics for your performance statistics and then displays them on your screen using Growl or simply to the command line.
+
+h3. Dependencies
+
+This script requires the 'Garb' (for Google Analytics support) and 'ruby-growl' for Growl support.
+
+It also probably runs only on a Mac due to the Growl dependency.
+
+h3. To Do
+
+* add command line options
+* think about cross platform compatibility
